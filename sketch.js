@@ -45,8 +45,16 @@ function draw() {
   
   // Draw: Title
   textAlign(CENTER, CENTER)
-  textSize(20)
   text("Weather Forcast Temperatures", width / 2, 30)
+  
+  // Draw: Labels for the axises
+  textAlign(CENTER, CENTER)
+  text("Days", width / 2, height - 20)
+  
+  textAlign(CENTER, CENTER)
+  translate(20, height / 2)
+  rotate(-PI / 2)
+  text("Temperature (F)", 0, 0)
 }
 
 function keyPressed() {
