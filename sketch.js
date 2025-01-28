@@ -43,11 +43,32 @@ function draw() {
   
   // console.log(images)
   
+  // Draw: Axes
+  drawAxes()
+  // Note: it seems that this function needs to be done before the functions for drawing titles and labels. If it's not done, 
+  
   // Draw: Title
   textAlign(CENTER, CENTER)
   text("Weather Forcast Temperatures", width / 2, 30)
   
   // Draw: Labels for the axises
+  drawLabels()
+}
+
+function keyPressed() {
+  redraw()
+}
+
+function drawAxes() {
+  let h = height * 0.9
+  // Y axis
+  line(dx, h, dx, height * 0.1)
+  
+  // X axis
+  line(dx, h, width - dx, h)
+}
+
+function drawLabels() {
   textAlign(CENTER, CENTER)
   text("Days", width / 2, height - 20)
   
@@ -55,8 +76,4 @@ function draw() {
   translate(20, height / 2)
   rotate(-PI / 2)
   text("Temperature (F)", 0, 0)
-}
-
-function keyPressed() {
-  redraw()
 }
