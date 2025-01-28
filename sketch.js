@@ -42,6 +42,11 @@ function draw() {
   }
   
   // console.log(images)
+  
+  // Draw: Title
+  textAlign(CENTER, CENTER)
+  textSize(20)
+  text("Weather Forcast Temperatures", width / 2, 30)
 }
 
 function keyPressed() {
